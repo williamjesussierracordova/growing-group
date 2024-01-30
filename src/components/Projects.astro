@@ -11,32 +11,32 @@ import Powerbi from '../components/icons/Powerbi.astro'
     const TAGS = {
         CMASMAS : {
             name: 'C++',
-            class: 'bg-blue text-black dark:bg-white',
+            class: 'bg-blue text-black dark:bg-blue-500',
             icon: Cplusplus
         },
         JAVA : {
             name: 'Java',
-            class: 'bg-red text-black dark:bg-white',
+            class: 'bg-red text-black dark:bg-red-300',
             icon: Java
         },
         EXCEL : {
             name: 'Excel',
-            class: 'bg-green text-black dark:bg-white',
+            class: 'bg-green text-black dark:bg-green-500',
             icon: Excel
         },
         ORACLE : {
             name: 'Oracle',
-            class: 'bg-red text-black dark:bg-white',
+            class: 'bg-red text-black dark:bg-red-500',
             icon: Oracle
         },
         SQL : {
-            name: 'SQL',
-            class: 'bg-red text-black dark:bg-white',
+            name: 'SQL Server',
+            class: 'bg-red text-black dark:bg-gray-300',
             icon: Sql
         },
         POWERBI : {
             name: 'Power BI',
-            class: 'bg-white text-black dark:bg-white',
+            class: 'bg-white text-black dark:bg-yellow-500',
             icon: Powerbi
         }
     }
@@ -52,7 +52,7 @@ import Powerbi from '../components/icons/Powerbi.astro'
     },
     {
       title: 'Sistema para un centro educativo',
-      description: 'Es una aplicación de escritorio desarrollada en java conectada a una base de datos local donde mediante un ERD definimos las clases/tablas/funciones que se necesitan para tener un registro actualizado de todos los participantes en los centros educativos(director,profesor,coordinador,estudiantes,padres de familia), asimismo los procesos de cada uno de los participantes como notas, horarios, asistencias, etc.',
+      description: 'Es una aplicación de escritorio desarrollada en java conectada a una base de datos local donde mediante un ERD definimos las clases/tablas/funciones que se necesitan para tener un registro actualizado de todos los participantes en los centros educativos (director, profesor, coordinador, estudiantes, padres de familia), asimismo los procesos de cada uno de los participantes como notas, horarios, asistencias, etc.',
       link:'https://github.com/williamjesussierracordova/Sistema_Educativo',
       github: 'https://github.com/williamjesussierracordova/Sistema_Educativo',
       image: '/colegio.webp',
@@ -81,25 +81,26 @@ import Powerbi from '../components/icons/Powerbi.astro'
     {
       PROJECTS.map(({ image, title, description, tags, link, github }) => (
         <article>
-          <h3 class="text-2xl font-semibold text-yellow-800 dark:text-yellow-200 mb-2">
+          <h3 class="text-4xl font-semibold text-yellow-800 dark:text-yellow-200 mb-2">
             {title}
           </h3>
-          <p class="text-lg mb-4 text-pretty">{description}</p>
-          <ul class="flex gap-x-2 flex-row mb-2 items-center ">
-            {tags.map((tag) => (
-              <li>
-                <span
-                  class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
-                >
-                  <tag.icon class=" size-6 " />
-                  {tag.name}
-                </span>
-              </li>
-            ))}
-          </ul>
+          
+            <p class="text-lg mb-4 text-pretty overflow-auto max-h-full">{description}</p> 
+            <ul class="flex gap-x-2 flex-row mb-2">
+          {tags.map((tag) => (
+            <li>
+              <span
+                class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
+              >
+                <tag.icon class="size-4" />
+                {tag.name}
+              </span>
+            </li>
+          ))}
+        </ul>
           <img
             loading="lazy"
-            class="rounded shadow-2xl shadow-white/10 aspect-video"
+            class="rounded shadow-2xl shadow-white/30 aspect-video"
             src={image}
             alt={`Captura de pantalla del proyecto ${image}`}
           />
