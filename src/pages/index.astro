@@ -1,0 +1,111 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+import Badge from '../components/Badge.astro';
+import Linkedin from '../components/icons/linkedin.astro';
+import Git from  '../components/icons/github.astro' ;
+import Social from '../components/icons/SocialPill.astro'
+import Email from '../components/icons/email.astro'
+import Instagram from '../components/icons/instagram.astro';
+import Cv from '../components/icons/cv.astro';
+import SectionContainer from '../components/SectionContainer.astro';
+import Briefcase from '../components/icons/BriefCase.astro';
+import Code from '../components/icons/code.astro';
+import Projects from '../components/Projects.astro';
+import AboutMe from '../components/Aboutme.astro';
+---
+
+<Layout title="William Sierra 🚀 - Estudiante futuro Desarrollador y Programador" description="Estudiante de Ingenieria de Software , apasionado por las nuevas tecnologiasy en busca constante de seguir creciendo a traves de nuevos retos y oportunidades">
+	
+	<main class="px-4" >
+
+		<SectionContainer class="py-44 pb-32" >
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<h1 class="text-gray-900 dark:text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10">Hola, Soy William 
+				<span class="animate-bounce">👋</span>
+				<a 
+					href="https://pe.linkedin.com/in/william-jesus-sierra-cordova-65580128a"
+					target ="_blank"
+					rel="noopener"
+					class = "flex justify-center items-center hover:scale-105 transition" 
+				>
+				<Badge>Open to work</Badge>
+			</a>
+			</h1>
+			<h2 class="text-xl lg:text-2xl text-balance max-w-[700px] text-black dark:text-white"> 
+				Estudiante de Ingeniería de Software 💻 en </span> <span class="text-red-800 dark:text-red-200">Lima, Perú.</span> 
+				Apasionado por las nuevas tecnologías y en
+				busca de continuar <span class="text-sky-800 dark:text-sky-200">  creciendo a través de nuevas experiencias
+				 y desafíos.</span>
+			</h2>
+
+			<nav class="flex gap-4 mt-8 flex-wrap" >
+				
+				<Social href="https://www.linkedin.com/in/william-jesus-sierra-cordova-65580128a/">
+					<Linkedin class="size-4 md:size-6"/>
+					Linkedin
+				</Social>
+
+				<Social  href="https://github.com/williamjesussierracordova">
+					<Git class="size-4 md:size-6" />
+					Github
+				</Social>
+
+				<Social  href="mailto:williamjsc@hotmail.com">
+					<Email class="size-4 md:size-6" />
+					Williamjsc@hotmai.com
+				</Social>
+
+				<!-- <Social  href="https://www.instagram.com/_williamjsc_">
+					<Instagram class="size-4 md:size-6" />
+					Instagram
+				</Social> -->
+
+				<Social  href="../../public/CV_WILLIAM_JESUS_SIERRA_CORDOVA.pdf" download="CV_WILLIAM_JESUS_SIERRA_CORDOVA.pdf">
+					<Cv class="size-4 md:size-6" /> 
+					Curriculum Vitae
+				</Social>
+
+			</nav>
+
+		</SectionContainer>
+
+		<SectionContainer id="proyectos">
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<h2
+			  class="text-3xl font-semibold mb-6 flex gap-x-3 items-center text-black/80 dark:text-white/80"
+			>
+			  <Code class="size-7" />
+			  Proyectos
+			</h2>
+			<Projects />
+		  </SectionContainer>
+	  
+		  <SectionContainer id="sobre-mi">
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<h2
+			  class="text-3xl font-semibold mb-6 flex gap-x-3 items-center text-black/80 dark:text-white/80"
+			>
+			  Sobre mi
+			</h2>
+			<AboutMe />
+		  </SectionContainer>
+		  
+	</main>
+</Layout>
+
+
+
