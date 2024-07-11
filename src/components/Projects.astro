@@ -69,8 +69,8 @@ import Powerbi from '../components/icons/Powerbi.astro'
     {
       title: 'Dashboard de vacunación COVID-19',
       description: 'Proyecto en el cual se tuvo que hacer una limpieza de datos de un archivo Excel para luego insertarlo en una base de datos de Oracle donde aplicamos buenas prácticas para el buen manejo de la BD y finalmente con los datos transformados poder hacer un dashboard en powerBi que nos permitió ver el avance de la vacunación en los distintos distritos, provincias y departamentos del Perú.',
-      link:'/',
-      github: '/',
+      link:'',
+      github: '',
       image: '/covid.webp',
       tags: [TAGS.EXCEL, TAGS.ORACLE, TAGS.POWERBI]
     }
@@ -100,7 +100,7 @@ import Powerbi from '../components/icons/Powerbi.astro'
         </ul>
           <img
             loading="lazy"
-            class="rounded shadow-2xl shadow-white/30 aspect-video"
+            class="w-full h-auto mb-4"
             src={image}
             alt={`Captura de pantalla del proyecto ${image}`}
           />
@@ -111,7 +111,7 @@ import Powerbi from '../components/icons/Powerbi.astro'
                 Ver código fuente
               </LinkButton>
             )}
-            <LinkButton href={link} >
+            {/* <LinkButton href={link} >
               <svg
                 width="24"
                 height="24"
@@ -136,7 +136,7 @@ import Powerbi from '../components/icons/Powerbi.astro'
                 </>
               </svg>
               Ir al sitio web
-            </LinkButton>
+            </LinkButton> */}
           </footer>
         </article>
       ))
